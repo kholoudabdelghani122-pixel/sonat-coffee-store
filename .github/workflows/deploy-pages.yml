@@ -25,6 +25,19 @@ jobs:
         uses: actions/checkout@v6
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+      - name: Add project path to root-relative URLs
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          for path in [*Path('.').glob('*.html'), Path('styles.css'), Path('main.js')]:
+              text = path.read_text()
+              text = text.replace('href="/', 'href="/sonat-coffee-store/')
+              text = text.replace('src="/', 'src="/sonat-coffee-store/')
+              text = text.replace('url("/assets/', 'url("/sonat-coffee-store/assets/')
+              text = text.replace('"/assets/', '"/sonat-coffee-store/assets/')
+              path.write_text(text)
+          PY
       - name: Upload website files
         uses: actions/upload-pages-artifact@v4
         with:
