@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#eee7d8" />
+    <meta name="description" content="Sign in to your SONAT Coffee account, manage your details, and review your orders." />
+    <title>My Account — SONAT Coffee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=account-v1" />
+  </head>
+  <body>
+    <div class="announcement">Free on orders of EGP 700 <span>·</span> Get 10% off your first order with code: <strong>SONAT27</strong></div>
+    <header class="site-header" id="top">
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav-group nav-left" aria-label="Main navigation">
+        <a href="/index.html#top">Home</a><a href="/shop.html">Shop</a><a href="/story.html">Story</a><a href="/cafe.html">Café</a>
+        <a class="mobile-nav-utility" href="/wholesale.html">Wholesale</a><a class="mobile-nav-utility" href="/contact.html">Contact</a><a class="mobile-nav-utility" href="/faq.html">FAQs</a><a class="mobile-nav-utility" href="#" lang="ar" dir="rtl">العربية</a>
+      </nav>
+      <a href="/index.html#top" class="brand" aria-label="SONAT Coffee home"><img src="/assets/logo.svg" alt="SONAT Specialty Coffee" /></a>
+      <nav class="nav-group nav-right" aria-label="Utility navigation">
+        <a href="/wholesale.html">Wholesale</a><a href="/contact.html">Contact</a><a href="/faq.html">FAQs</a><a href="#" lang="ar" dir="rtl">العربية</a>
+        <a class="icon-button" href="account.html" aria-label="Account" aria-current="page"><img src="/assets/user.svg" alt="" /></a>
+        <a class="icon-button cart-button" href="cart.html" aria-label="Shopping bag"><img src="/assets/bag.svg" alt="" /><span class="cart-count">0</span></a>
+      </nav>
+    </header>
+    <main class="account-page">
+      <section class="account-shell" aria-label="SONAT Coffee account">
+        <aside class="account-story-panel">
+          <p class="eyebrow">Your SONAT account</p>
+          <h1>Good coffee,<br /><em>made personal.</em></h1>
+          <p class="account-story-copy">Keep your coffee ritual close. Manage your details, follow your orders, and find your favorites in one place.</p>
+          <div class="account-story-note"><span aria-hidden="true">✳</span><p>Thoughtfully roasted.<br />Ready when you are.</p></div>
+        </aside>
+        <section class="account-panel">
+          <div class="account-auth-view" data-account-screen="auth">
+            <p class="eyebrow">Welcome back</p>
+            <h2 class="account-panel-title" data-auth-title>Sign in to your account</h2>
+            <p class="account-panel-copy" data-auth-copy>Pick up where your next great cup begins.</p>
+            <div class="account-auth-tabs" role="tablist" aria-label="Account access">
+              <button class="is-active" type="button" role="tab" aria-selected="true" data-account-mode="login">Sign in</button>
+              <button type="button" role="tab" aria-selected="false" data-account-mode="register">Create account</button>
+            </div>
+            <form class="account-form" data-account-form="login">
+              <label>Email address<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required /></label>
+              <label>Password<span class="account-password-field"><input type="password" name="password" autocomplete="current-password" placeholder="Enter your password" required /><button type="button" class="account-password-toggle" aria-label="Show password" data-password-toggle>Show</button></span></label>
+              <div class="account-form-options"><label class="account-checkbox"><input type="checkbox" name="remember" /><span>Keep me signed in</span></label><button type="button" class="account-text-button" data-account-view="forgot">Forgot password?</button></div>
+              <button class="account-submit" type="submit">Sign in</button>
+              <p class="account-form-note">New to SONAT? <button type="button" class="account-text-button" data-account-mode="register">Create an account</button></p>
+            </form>
+            <form class="account-form" data-account-form="register" hidden>
+              <div class="account-form-two-col"><label>Full name<input type="text" name="name" autocomplete="name" placeholder="Your full name" required /></label><label>Phone number<input type="tel" name="phone" autocomplete="tel" placeholder="+20" required /></label></div>
+              <label>Email address<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required /></label>
+              <label>Create password<span class="account-password-field"><input type="password" name="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required /><button type="button" class="account-password-toggle" aria-label="Show password" data-password-toggle>Show</button></span></label>
+              <button class="account-submit" type="submit">Create account</button>
+              <p class="account-form-note">By creating an account, you agree to our <a href="/index.html#contact">Terms &amp; Conditions</a>.</p>
+            </form>
+            <form class="account-form" data-account-form="forgot" hidden>
+              <p class="account-reset-icon" aria-hidden="true">↗</p>
+              <label>Email address<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required /></label>
+              <button class="account-submit" type="submit">Send reset link</button>
+              <button type="button" class="account-back-button" data-account-view="login">← Back to sign in</button>
+            </form>
+            <div class="account-preview-access"><span>Exploring the design?</span><button type="button" class="account-text-button" data-open-dashboard>Preview dashboard</button></div>
+            <p class="account-preview-disclaimer">Preview only. Sign-in, registration, and password reset need a connected store backend.</p>
+          </div>
+          <div class="account-dashboard" data-account-screen="dashboard" hidden>
+            <div class="account-dashboard-top"><div><p class="eyebrow">Your space</p><h2 class="account-panel-title">Welcome to your account</h2><p class="account-panel-copy">A home for your details and every SONAT order.</p></div><button class="account-signout" type="button" data-account-view="login">Sign out</button></div>
+            <nav class="account-dashboard-nav" aria-label="Account sections" role="tablist">
+              <button class="is-active" type="button" role="tab" aria-selected="true" data-dashboard-tab="overview">Overview</button>
+              <button type="button" role="tab" aria-selected="false" data-dashboard-tab="orders">Orders</button>
+              <button type="button" role="tab" aria-selected="false" data-dashboard-tab="details">Personal details</button>
+              <button type="button" role="tab" aria-selected="false" data-dashboard-tab="security">Security</button>
+            </nav>
+            <section class="account-dashboard-section" data-dashboard-section="overview">
+              <div class="account-welcome-card"><div><span class="account-welcome-kicker">YOUR COFFEE JOURNEY</span><h3>Welcome, coffee lover</h3><p>Your next favorite cup is only a few clicks away.</p></div><a href="/shop.html" class="account-shop-link">Explore coffee <span aria-hidden="true">→</span></a></div>
+              <div class="account-stat-grid"><article><span>Orders placed</span><strong>0</strong><small>Your order history lives here.</small></article><article><span>Account status</span><strong class="account-status"><i></i> Ready</strong><small>Complete your profile to get started.</small></article></div>
+              <div class="account-overview-grid">
+                <article class="account-info-card"><div class="account-card-heading"><h3>Personal details</h3><button type="button" class="account-text-button" data-dashboard-tab="details">Edit</button></div><dl><div><dt>Name</dt><dd>—</dd></div><div><dt>Email</dt><dd>—</dd></div><div><dt>Phone</dt><dd>—</dd></div></dl></article>
+                <article class="account-info-card"><div class="account-card-heading"><h3>Account security</h3><button type="button" class="account-text-button" data-dashboard-tab="security">Manage</button></div><dl><div><dt>Password</dt><dd class="account-masked-password" aria-label="Password hidden">••••••••••</dd></div></dl><p class="account-small-note">For your security, your password is never shown.</p></article>
+              </div>
+              <div class="account-recent-orders"><div class="account-card-heading"><h3>Recent orders</h3><button type="button" class="account-text-button" data-dashboard-tab="orders">View all</button></div><div class="account-orders-empty"><span aria-hidden="true">▤</span><p>No orders yet</p><small>Your coffee orders will appear here.</small></div></div>
+            </section>
+            <section class="account-dashboard-section" data-dashboard-section="orders" hidden><div class="account-section-title"><div><p class="eyebrow">The good stuff</p><h3>Your orders</h3></div><span>0 orders</span></div><div class="account-orders-empty account-orders-panel"><span aria-hidden="true">▤</span><h4>Your order history starts here</h4><p>Once you place an order, you can track its progress and find all the details right here.</p><a href="/shop.html" class="button button-dark">Explore coffee</a></div></section>
+            <section class="account-dashboard-section" data-dashboard-section="details" hidden><div class="account-section-title"><div><p class="eyebrow">Your profile</p><h3>Personal details</h3></div><button class="account-text-button" type="button" data-account-message>Save changes</button></div><div class="account-info-card account-detail-form"><label>Full name<input type="text" placeholder="Add your name" autocomplete="name" /></label><label>Email address<input type="email" placeholder="Add your email" autocomplete="email" /></label><label>Phone number<input type="tel" placeholder="Add your phone number" autocomplete="tel" /></label><p class="account-preview-disclaimer">Profile updates will be available once your account is connected.</p></div></section>
+            <section class="account-dashboard-section" data-dashboard-section="security" hidden><div class="account-section-title"><div><p class="eyebrow">Keep it protected</p><h3>Security</h3></div></div><div class="account-info-card account-security-form"><div class="account-password-summary"><span><small>Current password</small><strong>••••••••••</strong></span><button type="button" class="account-text-button" data-toggle-password-form>Change password</button></div><form class="account-form account-change-password" hidden><label>Current password<input type="password" autocomplete="current-password" required /></label><label>New password<input type="password" autocomplete="new-password" minlength="8" required /></label><label>Confirm new password<input type="password" autocomplete="new-password" minlength="8" required /></label><button class="account-submit" type="submit">Update password</button></form><p class="account-preview-disclaimer">Password updates require a secure authentication service.</p></div></section>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer class="site-footer" id="contact" aria-label="SONAT Coffee footer">
+      <div class="footer-main">
+        <div class="footer-brand-column"><div class="footer-brand-top"><img class="footer-logo" src="/assets/footer-logo.svg" alt="SONAT Specialty Coffee" /><nav class="footer-socials" aria-label="Social media"><a href="/index.html#contact" aria-label="YouTube"><img src="/assets/instagram.svg" alt="" /></a><a href="/index.html#contact" aria-label="TikTok"><img src="/assets/facebook.svg" alt="" /></a><a href="/index.html#contact" aria-label="Facebook"><img src="/assets/tiktok.svg" alt="" /></a><a href="/index.html#contact" aria-label="Instagram"><img src="/assets/youtube.svg" alt="" /></a></nav></div><div class="footer-brand-copy"><p class="footer-tagline">A premium coffee roastery<br />founded in Egypt, built for the world.</p><p class="footer-description">Engineered Coffee Excellence. Precision in Every Roast. Excellence in Every Cup.</p></div></div>
+        <nav class="footer-link-column" aria-label="Company"><h2>Company</h2><ul><li><a href="/story.html">Our Story</a></li><li><a href="/index.html#story">Our Process</a></li><li><a href="/index.html#standards">Sustainability</a></li><li><a href="/index.html#contact">Careers</a></li><li><a href="/index.html#contact">News</a></li></ul></nav>
+        <nav class="footer-link-column footer-shop-column" aria-label="Shop"><h2>Shop</h2><ul><li><a href="/shop.html#shop">All Coffee</a></li><li><a href="/shop.html#signature">Signature Blend</a></li><li><a href="/shop.html#intenso">Intenso Blend</a></li><li><a href="/shop.html#arabic">Arabic Blend</a></li><li><a href="/shop.html#turkish">Turkish Blend</a></li><li><a href="/shop.html#cinnaspice">Cinnaspice™ Blend</a></li><li><a href="/shop.html#nocciola">Nocciola Blend</a></li></ul></nav>
+        <div class="footer-contact-column"><div class="footer-contact-info"><h2>Contact</h2><address><p>Phone: <a href="tel:+201234567890">+20 123 456 7890</a></p><p>Email: <a href="mailto:info@sonatcoffee.com">info@sonatcoffee.com</a></p><p>Location: Alexandria, Egypt</p></address></div><form class="footer-newsletter"><label class="visually-hidden" for="footer-email">Enter your email</label><input id="footer-email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required /><button type="submit">Subscribe</button><p class="footer-legal">By clicking, you agree to our <a href="/index.html#contact">Terms &amp; Conditions</a>, and <a href="/index.html#contact">Privacy and Data Protection Policy</a>.</p></form></div>
+      </div>
+      <div class="footer-copyright"><p>Copyright © 2025 SONAT Coffee. All Rights Reserved. Crafted in Egypt.</p></div>
+    </footer>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="/main.js?v=account-v1" type="module"></script>
+  </body>
+</html>
